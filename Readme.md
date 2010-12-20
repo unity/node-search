@@ -1,3 +1,13 @@
+#A quick hack to add exact match to node-search, by Romain Dardour
+
+Beware, the return format has been changed to allow selecting raw or phonetic searches.
+The return object is now in the format: 
+         {
+           raw: searchResults,
+           phonetic: searchResults,
+         }
+This was the quickest way to detect if exact matches were found, and use them instead of phonetic ones, or use both.
+
 # A JavaScript full text search engine
 
 This is an implementation of a "vector space model" with "Porter stemming", "double-metaphones", false boolean searches, field searching and field weighting. Basically it a full text search engine that has most of the fancy features the well known search engines libraries like Sphinx, Solr, Lucene, etc. The big difference is that it is written in JavaScript originally for use with Node.js.
